@@ -2,7 +2,7 @@
 - Du velger selv hvilket språk du velger å gå for, gjør det som er mest hensiktmessig for din del. 
 - Sjekk i hver undermappe for hver oppgave om det finnes noen relaterte dokumenter du trenger å bruke i oppgaven. 
 
-Fork prosjektet og push svarene dine i din eget repo. 
+Fork prosjektet og push svarene dine i din egen repo. 
 
 ---
 
