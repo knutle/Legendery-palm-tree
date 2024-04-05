@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prosjektrapport</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css"
+        integrity="sha512-h/laqMqQKUXxFuu6aLAaSrXYwGYQ7qk4aYCQ+KJwHZMzAGaEoxMM6h8C+haeJTU1V6E9jrSUnjpEzX23OmV/Aw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: rgba(0, 0, 0, 0.9);
+                --border-color: rgb(48, 54, 61);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: rgba(200, 200, 200, 0.3);
+                --border-color: rgba(48, 54, 61, 0.4);
+            }
+        }
+
+        body {
+            background-color: var(--bg-color);
+        }
+
+        abbr[title],
+        acronym[title] {
+            border-bottom: 1px dotted;
+            font-weight: 600;
+        }
+
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+            border-radius: 20px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: var(--border-color);
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="markdown-body">
+        <h1 id="prosjektbeskrivelse">Prosjektbeskrivelse</h1>
+<blockquote>
+<p>Sist oppdatert: 2024-04-05 23:29 / PowerShell Core 7.4.1 / osx-arm64 14.4.1 (Arm64)</p>
+</blockquote>
+<p><em>Dette dokumentet samler resultatene fra hver enkelt oppgave i en helhetlig oversikt.</em></p>
+<p><em>Referanser til detaljer rundt prosjektstruktur og enkeltkomponenter finnes i relevante deler av rapporten.</em></p>
+<p><em>Oppdatering av rapporten håndteres av <strong>Scripts/GenerateProjectReport.ps1</strong>.</em></p>
+<p><em>Det er definert launch configs i VSCode for denne i tillegg til hovedkomponentene i prosjektet.</em></p>
+<h2 id="oppgave-1">Oppgave 1</h2>
+<h3 id="variant-1">Variant 1</h3>
+<table>
+<thead>
+<tr>
+<th>Original</th>
+<th>Reversed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Musikk</td>
+<td>kkisuM</td>
+</tr>
+<tr>
+<td>Hav</td>
+<td>vaH</td>
+</tr>
+<tr>
+<td>Kake</td>
+<td>ekaK</td>
+</tr>
+<tr>
+<td>Sykkel</td>
+<td>lekkyS</td>
+</tr>
+<tr>
+<td>Stjerne</td>
+<td>enrejtS</td>
+</tr>
+<tr>
+<td>Drøm</td>
+<td>mørD</td>
+</tr>
+<tr>
+<td>Fjell</td>
+<td>llejF</td>
+</tr>
+<tr>
+<td>Lys</td>
+<td>syL</td>
+</tr>
+<tr>
+<td>Sol</td>
+<td>loS</td>
+</tr>
+<tr>
+<td>Vindu</td>
+<td>udniV</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variant-2">Variant 2</h3>
+<ul>
+<li>kkisuM</li>
+<li>vaH</li>
+<li>ekaK</li>
+<li>lekkyS</li>
+<li>enrejtS</li>
+<li>mørD</li>
+<li>llejF</li>
+<li>syL</li>
+<li>loS</li>
+<li>udniV</li>
+</ul>
+<h2 id="oppgave-2">Oppgave 2</h2>
+<h4 id="listen-fra-array.json-inneholder-totalt-25-tall-hvorav-14-er-partall">Listen fra <abbr title="Assets/Task2/array.json">array.json</abbr> inneholder totalt 25 tall hvorav 14 er partall</h4>
+<p><span class="math">\(\displaystyle \sum \ \textcolor{gray}{\{6,14,16,18,24,38,44,56,56,66,80,80,84,100\}} = \;  \textcolor{green}{\textbf{682}}\)</span></p>
+<h2 id="oppgave-3">Oppgave 3</h2>
+<h4 id="det-fantes-3-filer-i-oppgavens-mappestruktur-som-oppfylte-de-gitte-kriteriene">Det fantes 3 filer i oppgavens mappestruktur som oppfylte de gitte kriteriene</h4>
+<table>
+<thead>
+<tr>
+<th>AssetPath</th>
+<th>AbsolutePath</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task3/Mappe8/Fil3.txt</td>
+<td>/Users/knut/Developer/knutle/Legendery-palm-tree/Assets/Task3/Mappe8/Fil3.txt</td>
+</tr>
+<tr>
+<td>Task3/Mappe3/Fil1.txt</td>
+<td>/Users/knut/Developer/knutle/Legendery-palm-tree/Assets/Task3/Mappe3/Fil1.txt</td>
+</tr>
+<tr>
+<td>Task3/Mappe4/Fil2.txt</td>
+<td>/Users/knut/Developer/knutle/Legendery-palm-tree/Assets/Task3/Mappe4/Fil2.txt</td>
+</tr>
+</tbody>
+</table>
+<h2 id="oppgave-4">Oppgave 4</h2>
+
+    </article>
+</body>
+
+</html>
+
