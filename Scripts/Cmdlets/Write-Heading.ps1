@@ -20,9 +20,10 @@
 
     process {
         if ($Level -eq "Title") {
-            Write-Host "#" -ForegroundColor Yellow
+            Write-Host -NoNewline:$Compact
+            Write-Host "########################" -ForegroundColor Yellow
             Write-Host "# $Value" -ForegroundColor Yellow
-            Write-Host "#" -ForegroundColor Yellow
+            Write-Host "########################" -ForegroundColor Yellow
             Write-Host -NoNewline:$Compact
 
             return
