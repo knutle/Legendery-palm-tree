@@ -5,32 +5,39 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run Task 1",
+            "name": "Generate Full Project Report",
             "type": "PowerShell",
             "request": "launch",
-            "script": "${workspaceFolder}/Scripts/RunTask1Demo.ps1",
+            "script": "${workspaceFolder}/Scripts/GenerateProjectReport.ps1",
             "cwd": "${cwd}"
         },
         {
-            "name": "Run Task 2",
+            "name": "Debug Task 1",
             "type": "PowerShell",
             "request": "launch",
-            "script": "${workspaceFolder}/Scripts/RunTask2Demo.ps1",
+            "script": "${workspaceFolder}/Scripts/Tasks/RunTask1.ps1 > ${workspaceFolder}/Output/DebugRunTask1.md",
             "cwd": "${cwd}"
         },
         {
-            "name": "Run Task 3",
+            "name": "Debug Task 2",
             "type": "PowerShell",
             "request": "launch",
-            "script": "${workspaceFolder}/Scripts/RunTask3Demo.ps1",
+            "script": "${workspaceFolder}/Scripts/Tasks/RunTask2.ps1 > ${workspaceFolder}/Output/DebugRunTask2.md",
             "cwd": "${cwd}"
         },
         {
-            "name": "Run Task 4",
+            "name": "Debug Task 3",
             "type": "PowerShell",
             "request": "launch",
-            "script": "${workspaceFolder}/Scripts/RunTask4Demo.ps1",
+            "script": "${workspaceFolder}/Scripts/Tasks/RunTask3.ps1 > ${workspaceFolder}/Output/DebugRunTask3.md",
             "cwd": "${cwd}"
         },
+        {
+            "name": "Debug Task 4",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}/Scripts/Tasks/RunTask4.ps1 > ${workspaceFolder}/Output/DebugRunTask4.md",
+            "cwd": "${cwd}"
+        }
     ]
 }

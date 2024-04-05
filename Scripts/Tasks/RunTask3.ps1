@@ -1,12 +1,12 @@
-﻿. "$PSScriptRoot/Common/Initialize.ps1"
+﻿. "$PSScriptRoot/../Common/Initialize.ps1"
 
-Write-Heading "Oppgave 3"
+Write-Markdown "Oppgave 3" -Format Heading1
 
 $matchingPaths = Get-ChildItem -Path (Get-AssetPath "Task3") -Filter "*.txt" -Recurse -File | Select-Object -ExpandProperty FullName | Where-Object {
     (Get-Content -Path $_ -Raw) -like "*Sommer*"
 }
 
-Write-Heading "Fant disse $($matchingPaths.Length) filene som oppfylte kravene: " -Level Subtitle -Compact
+Write-Markdown "Det fantes $($matchingPaths.Length) filer i oppgavens mappestruktur som oppfylte de gitte kriteriene" -Format Heading3
 
 $assetParentPath = (Get-AssetPath)
 $matchingPaths | ForEach-Object {
@@ -14,6 +14,4 @@ $matchingPaths | ForEach-Object {
         AssetPath    = $_ -replace "^$assetParentPath/*", ""
         AbsolutePath = $_
     }
-} | Format-Table
-
-
+} | Write-MarkdownTable "AssetPath", "AbsolutePath"
