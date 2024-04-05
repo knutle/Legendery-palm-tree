@@ -7,15 +7,7 @@
         $Item
     )
 
-    begin {
-        Write-Markdown -Format Spacer
-    }
-
     process {
         Write-Output "* $Item  "
-    }
-
-    end {
-        Write-Markdown -Format Spacer
     }
 }

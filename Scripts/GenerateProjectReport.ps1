@@ -1,6 +1,6 @@
 ﻿. "$PSScriptRoot/Common/Initialize.ps1"
 
-Write-Markdown "Prosjektbeskrivelse" -Format Title | Merge-Output ReportOutput
+Write-Markdown "Prosjektrapport" -Format Title | Merge-Output ReportOutput
 Write-Markdown "Sist oppdatert: $(Get-Date -Format "yyyy-MM-dd HH:mm") / PowerShell $($PSVersionTable.PSEdition) $($PSVersionTable.PSVersion) / $([System.Runtime.InteropServices.RuntimeInformation]::RuntimeIdentifier) $([System.Environment]::OSVersion.Version.ToString()) ($([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture))" -Format Blockquote | Merge-Output ReportOutput
 
 Write-Markdown "Dette dokumentet samler resultatene fra hver enkelt oppgave i en helhetlig oversikt." -Format Italic | Merge-Output ReportOutput

@@ -13,3 +13,4 @@ Get-Content -Path (Get-AssetPath "Task1/file.txt") | ForEach-Object {
 
 Write-Markdown "Variant 2" -Format Heading2
 Get-Content -Path (Get-AssetPath "Task1/file.txt") | Convert-String -Reverse | Write-MarkdownList
+Write-Markdown -Format Spacer

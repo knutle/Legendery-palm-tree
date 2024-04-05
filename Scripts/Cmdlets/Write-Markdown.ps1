@@ -81,6 +81,6 @@
             }
         }
 
-        Write-Output "$prefix$Value$suffix  "
+        Write-Output "$prefix$Value$suffix  `n"
     }
 }

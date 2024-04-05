@@ -23,4 +23,8 @@
     process {
         Write-Output "$(($Headers | ForEach-Object { $Item.$_ }) -join " | ")  "
     }
+
+    end {
+        Write-Markdown -Format Spacer
+    }
 }
