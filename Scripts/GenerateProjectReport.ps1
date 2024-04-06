@@ -1,5 +1,7 @@
 ﻿. "$PSScriptRoot/Common/Initialize.ps1"
 
+$script:ReportOutput = $null
+
 Write-Markdown "Prosjektrapport" -Format Title | Merge-Output ReportOutput
 Write-Markdown "Sist oppdatert: $(Get-Date -Format "yyyy-MM-dd HH:mm") / $(Get-PoshEditionString) / $(Get-OsRuntimeIdentifierString)" -Format Blockquote | Merge-Output ReportOutput
 
@@ -13,7 +15,7 @@ Write-Markdown "Det er definert launch configs i VSCode for denne i tillegg til 
 . "$PSScriptRoot/Tasks/RunTask3.ps1" | Merge-Output ReportOutput
 . "$PSScriptRoot/Tasks/RunTask4.ps1" | Merge-Output ReportOutput
 
-$path = Join-Path "$PSScriptRoot" "../readme.md" -Resolve
+$path = Resolve-ProjectItemPath -SubPath "readme.md"
 $script:ReportOutput | Out-File $path
 
 

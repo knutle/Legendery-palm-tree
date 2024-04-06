@@ -1,6 +1,6 @@
 # Prosjektrapport  
 
-> Sist oppdatert: 2024-04-06 11:25 / PowerShell Core 7.4.1 / osx-arm64 14.4.1 (Arm64)    
+> Sist oppdatert: 2024-04-06 11:44 / PowerShell Core 7.4.1 / osx-arm64 14.4.1 (Arm64)    
 
 *Dette dokumentet samler resultatene fra hver enkelt oppgave i en helhetlig oversikt.*  
 
@@ -54,9 +54,9 @@ $\displaystyle \sum \ \textcolor{gray}{\{6,14,16,18,24,38,44,56,56,66,80,80,84,1
 
 AssetPath | AbsolutePath  
 -- | -  
-Task3/Mappe8/Fil3.txt | /Users/knut/Developer/knutle/Legendery-palm-tree/Assets/Task3/Mappe8/Fil3.txt  
-Task3/Mappe3/Fil1.txt | /Users/knut/Developer/knutle/Legendery-palm-tree/Assets/Task3/Mappe3/Fil1.txt  
-Task3/Mappe4/Fil2.txt | /Users/knut/Developer/knutle/Legendery-palm-tree/Assets/Task3/Mappe4/Fil2.txt  
+Task3/Mappe8/Fil3.txt | \<ProjectRoot\>/Assets/Task3/Mappe8/Fil3.txt  
+Task3/Mappe3/Fil1.txt | \<ProjectRoot\>/Assets/Task3/Mappe3/Fil1.txt  
+Task3/Mappe4/Fil2.txt | \<ProjectRoot\>/Assets/Task3/Mappe4/Fil2.txt  
     
 
 ## Oppgave 4  

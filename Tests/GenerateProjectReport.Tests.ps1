@@ -33,8 +33,8 @@ Describe "GenerateProjectReport" {
         $htmlOutputTempFilePath = "$([System.IO.Directory]::CreateTempSubdirectory().FullName)/$([Guid]::NewGuid())_GenerateProjectReport.Output.html"
 
         & "$PSScriptRoot/../Scripts/GenerateProjectReport.ps1"
-        $markdownOutput = Get-Content -Path (Join-Path "$PSScriptRoot" "../readme.md" -Resolve) -Raw
-        $markdownOutput | Out-String | Out-File -FilePath $markdownOutputTempFilePath -Force
+        $markdownOutput = Get-Content -Path (Resolve-ProjectItemPath -SubPath "readme.md") -Raw
+        (Repair-MockPaths $markdownOutput) | Out-String | Out-File -FilePath $markdownOutputTempFilePath -Force
 
         $htmlOutput = Get-Content -Path $htmlReportPath -Raw
         $htmlOutput | Out-String | Out-File -FilePath $htmlOutputTempFilePath -Force
