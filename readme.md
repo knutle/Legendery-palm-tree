@@ -1,6 +1,6 @@
-# Prosjektbeskrivelse  
+# Prosjektrapport  
 
-> Sist oppdatert: 2024-04-05 23:29 / PowerShell Core 7.4.1 / osx-arm64 14.4.1 (Arm64)    
+> Sist oppdatert: 2024-04-06 11:25 / PowerShell Core 7.4.1 / osx-arm64 14.4.1 (Arm64)    
 
 *Dette dokumentet samler resultatene fra hver enkelt oppgave i en helhetlig oversikt.*  
 
