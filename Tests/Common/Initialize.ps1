@@ -11,6 +11,11 @@ function Get-RealProjectBasePath() {
     return $originalProjectBasePath
 }
 
+$Script:PESTER_MOCKED_BASE_PATH = $TestDrive
+function Set-MockedProjectBasePath([string]$Path) {
+    $Script:PESTER_MOCKED_BASE_PATH = $Path
+}
+
 function Repair-MockPaths($Source) {
     return $Source -replace $TestDrive, $originalProjectBasePath
 }
@@ -36,7 +41,7 @@ function Compare-StringSnapshot([string]$SnapshotId, [string]$InputValue) {
 }
 
 
-Mock Get-ProjectBasePath { return $TestDrive }
+Mock Get-ProjectBasePath { return $Script:PESTER_MOCKED_BASE_PATH }
 Publish-ProjectFakes
 Mock Get-Date { return "2024-04-06 08:06" }
 Mock Get-PoshEditionString { return "PowerShell Core 7.4.1" }

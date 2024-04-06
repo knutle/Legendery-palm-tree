@@ -1,13 +1,9 @@
 ﻿# Resolve-ProjectItemPath.Tests.ps1
 BeforeAll {
-    . "$PSScriptRoot/../Scripts/Common/Initialize.ps1"
+    . "$PSScriptRoot/Common/Initialize.ps1"
 }
 
 Describe "Ensure we can easily populate our mock project with dummy items" {
-    BeforeAll {
-        Mock Get-ProjectBasePath { return $TestDrive }
-    }
-
     It "Can initialize only empty directory structure if missing" {
         { Resolve-ProjectItemPath -SubPath "NewFolder/Other/Final" } | Should -Throw -ExpectedMessage "Failed to resolve path to project item 'Final' because '*Final' does not exist"
 
@@ -23,8 +19,6 @@ Describe "Ensure we can easily populate our mock project with dummy items" {
 
 Describe "Ensure we can resolve project items from mocked base path" {
     BeforeAll {
-        Mock Get-ProjectBasePath { return $TestDrive }
-
         "surely this must be the final draft" | Out-File -FilePath (Resolve-ProjectItemPath -SubPath "NewFolder/Other/Final/document.txt" -ForceFile)
 
         Resolve-ProjectItemPath -SubPath "MyStuff/new/archive" -ForceDirectory
@@ -62,6 +56,10 @@ Describe "Ensure we can resolve project items from mocked base path" {
 }
 
 Describe "Ensure we can resolve project item paths from real base path" {
+    BeforeAll {
+        Set-MockedProjectBasePath -Path (Get-RealProjectBasePath)
+    }
+
     It "Can get the real base path of the project" {
         Get-ProjectBasePath | Should -BeLike "*/Legendery-palm-tree"
     }
