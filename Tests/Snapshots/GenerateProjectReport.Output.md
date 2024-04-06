@@ -1,6 +1,6 @@
 # Prosjektrapport  
 
-> Sist oppdatert: 2024-04-06 11:44 / PowerShell Core 7.4.1 / osx-arm64 14.4.1 (Arm64)    
+> Sist oppdatert: 2024-04-06 08:06 / PowerShell Core 7.4.1 / osx-arm64 14.4.1 (Arm64)    
 
 *Dette dokumentet samler resultatene fra hver enkelt oppgave i en helhetlig oversikt.*  
 
@@ -60,4 +60,6 @@ Task3/Mappe4/Fil2.txt | \<ProjectRoot\>/Assets/Task3/Mappe4/Fil2.txt
     
 
 ## Oppgave 4  
+
+
 

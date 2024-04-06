@@ -12,6 +12,6 @@ $assetParentPath = (Get-AssetPath)
 $matchingPaths | ForEach-Object {
     [PSCustomObject]@{
         AssetPath    = $_ -replace "^$assetParentPath/*", ""
-        AbsolutePath = $_
+        AbsolutePath = $_ -replace "^$(Get-ProjectBasePath)", "\<ProjectRoot\>"
     }
 } | Write-MarkdownTable "AssetPath", "AbsolutePath"

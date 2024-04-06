@@ -8,12 +8,6 @@
     )
 
     process {
-        $path = (Join-Path "$PSScriptRoot/../../Assets/" $Identifier)
-
-        if (Test-Path $path) {
-            return Resolve-Path $path
-        }
-
-        throw "Failed to get asset '$Identifier' because '$path' does not exist"
+        return Resolve-ProjectItemPath "Assets/$Identifier"
     }
 }
